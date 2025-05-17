@@ -1,1 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Our Products - Paridhi Agencies</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- External Styles (use your existing CSS if needed) -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .product-header {
+            background: #007bff;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .product-header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .products-section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            transition: transform 0.2s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .product-content {
+            padding: 20px;
+        }
+
+        .product-content h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .product-content p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .read-more {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            margin-top: 15px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .read-more:hover {
+            background: #0056b3;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+            .product-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="product-header">
+        <h1>Our Medical Products</h1>
+        <p>Browse through our top categories of hospital and lab equipment</p>
+    </div>
+
+    <section class="products-section">
+        <div class="product-grid">
+
+            <!-- Product 1 -->
+            <div class="product-card">
+                <img src="img/products/ortho-trauma.jpg" alt="Ortho Trauma" class="product-img">
+                <div class="product-content">
+                    <h3>Ortho Trauma Implants</h3>
+                    <p>High-grade orthopedic trauma solutions for surgical fixation, trusted by specialists nationwide.</p>
+                    <div class="hidden full-text">
+                        <p>Our orthopedic trauma implants include plates, screws, nails, and instruments for treating fractures. Backed by brands like Meril for assured quality and compatibility.</p>
+                    </div>
+                    <button class="read-more" onclick="toggleReadMore(this)">Read More</button>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <img src="img/products/joint-replacement.jpg" alt="Joint Replacement" class="product-img">
+                <div class="product-content">
+                    <h3>Joint Replacement Systems</h3>
+                    <p>Advanced knee and hip joint solutions with precision-engineered materials for lasting durability.</p>
+                    <div class="hidden full-text">
+                        <p>We supply Meril Ortho's complete range of joint replacement systems designed to meet the evolving needs of orthopedic surgeons and patients alike.</p>
+                    </div>
+                    <button class="read-more" onclick="toggleReadMore(this)">Read More</button>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <img src="img/products/surgical-drapes.jpg" alt="Surgical Drapes" class="product-img">
+                <div class="product-content">
+                    <h3>Surgical Drapes</h3>
+                    <p>Reliable sterile barriers for operating rooms, offering patient and practitioner protection.</p>
+                    <div class="hidden full-text">
+                        <p>We provide Primewear surgical drapes that ensure sterile environments during surgeries, conforming to strict infection control guidelines.</p>
+                    </div>
+                    <button class="read-more" onclick="toggleReadMore(this)">Read More</button>
+                </div>
+            </div>
+
+            <!-- More product cards can be added here similarly -->
+
+        </div>
+    </section>
+
+    <script>
+        function toggleReadMore(button) {
+            const content = button.previousElementSibling;
+            content.classList.toggle('hidden');
+            button.textContent = content.classList.contains('hidden') ? 'Read More' : 'Read Less';
+        }
+    </script>
+
+</body>
+</html>
 
