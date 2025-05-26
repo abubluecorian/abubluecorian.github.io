@@ -1,0 +1,32 @@
+
+---
+
+## 📌 Key Features Implemented
+
+- AI-generated product images  
+- Brand-based product categorization  
+- Interactive dropdowns & counters  
+- Optimized for performance and responsiveness  
+- WhatsApp API integration for contact  
+- DNS propagated for both `www` and root domain  
+
+---
+
+## 🛠️ Maintenance Notes
+
+- Update products in `#products` section of `index.html`  
+- Redeploy by pushing to GitHub  
+- For DNS changes, use GoDaddy's dashboard  
+- Design changes can be prototyped in Adobe XD  
+
+---
+
+## 👨‍💻 Developer Notes
+
+This project was developed and deployed using GitHub Pages, leveraging custom design techniques and responsive editing for a seamless user experience. While GitHub Pages is ideal for static sites, it does have limitations such as no PHP or dynamic server-side scripting. Future expansion may require CPanel hosting for backend capabilities.
+
+
+
+---
+
+© 2025 Paridhi Agencies | Developed & Maintained by Muhammad Abu Zer
