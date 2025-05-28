@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <title>Our Products - Paridhi Agencies</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <!-- External Styles (use your existing CSS if needed) -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
     <style>
         body {
@@ -15,6 +15,68 @@
             background-color: #f9f9f9;
             margin: 0;
             padding: 0;
+        }
+
+        .navigation {
+            background: #007bff;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .home-btn {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: opacity 0.2s;
+        }
+
+        .home-btn:hover {
+            opacity: 0.9;
+            color: white;
+            text-decoration: none;
+        }
+
+        .search-container {
+            width: 100%;
+            max-width: 500px;
+            position: relative;
+        }
+
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            background: #007bff;
+        }
+
+        #productSearch {
+            width: 100%;
+            padding: 12px 20px;
+            padding-right: 40px;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        #productSearch:focus {
+            outline: none;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #777;
         }
 
         .product-header {
@@ -73,6 +135,14 @@
             color: #555;
         }
 
+        .no-results {
+            text-align: center;
+            grid-column: 1 / -1;
+            padding: 40px;
+            color: #666;
+            display: none;
+        }
+
         @media (min-width: 768px) {
             .product-grid {
                 display: grid;
@@ -80,124 +150,259 @@
                 gap: 20px;
             }
         }
+
+        @media (max-width: 600px) {
+            .navigation {
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px;
+            }
+            
+            .search-container {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <div class="product-header">
-        <h1>Our Medical Products</h1>
-        <p>Browse through our top categories of hospital and lab equipment</p>
+<div class="navigation">
+    <a href="index.html" class="home-btn">
+        <i class="fa fa-arrow-left"></i> Back to Home
+    </a>
+    
+    <div class="search-container">
+        <input type="text" id="productSearch" placeholder="Search products...">
+        <i class="fa fa-search search-icon"></i>
     </div>
+</div>
 
-    <section class="products-section">
-        <div class="product-grid">
+<div class="product-header">
+    <h1>Our Medical Products</h1>
+    <p>Browse through our top categories of hospital and lab equipment</p>
+</div>
 
-            <div class="product-card">
-                <div class="product-img">Image Placeholder</div>
-                <div class="product-content">
-                    <h3>Meril Endo-Surgery</h3>
-                    <p>Advanced minimally invasive surgical tools from Meril, supporting laparoscopic, bariatric, and general surgeries.</p>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-img">Image Placeholder</div>
-                <div class="product-content">
-                    <h3>Meril Diagnostics</h3>
-                    <p>Reliable diagnostic kits and lab solutions used for rapid and accurate detection across multiple diseases.</p>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-img">Image Placeholder</div>
-                <div class="product-content">
-                    <h3>Nipro Syringe</h3>
-                    <p>Precision-engineered syringes known for smooth plunger action and accurate dosage delivery.</p>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-img">Image Placeholder</div>
-                <div class="product-content">
-                    <h3>B Braun</h3>
-                    <p>Comprehensive range of IV cannulas, infusion systems, and wound care products from a trusted global brand.</p>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-img">Image Placeholder</div>
-                <div class="product-content">
-                    <h3>Hitech Syringe</h3>
-                    <p>Disposable syringes and infusion sets made under stringent quality controls for hospital use.</p>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-img">Image Placeholder</div>
-                <div class="product-content">
-                    <h3>Vygon</h3>
-                    <p>Specialized medical and surgical solutions including catheters and vascular access devices.</p>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-img">Image Placeholder</div>
-                <div class="product-content">
-                    <h3>3M India Ltd.</h3>
-                    <p>Medical-grade adhesive solutions, surgical drapes, and infection prevention products from 3M.</p>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-img">Image Placeholder</div>
-                <div class="product-content">
-                    <h3>Smith & Nephew</h3>
-                    <p>Leading supplier of advanced wound management and orthopedic care solutions.</p>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-img">Image Placeholder</div>
-                <div class="product-content">
-                    <h3>Polymed</h3>
-                    <p>Disposable medical devices for infusion therapy, anesthesia, and urology.</p>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-img">Image Placeholder</div>
-                <div class="product-content">
-                    <h3>Celon Labs</h3>
-                    <p>Manufacturers of oncology and critical care pharmaceutical formulations.</p>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-img">Image Placeholder</div>
-                <div class="product-content">
-                    <h3>Neon & Mill Laboratories</h3>
-                    <p>Trusted names in injectables, tablets, and IV fluids, frequently used in diagnostics and general medicine.</p>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-img">Image Placeholder</div>
-                <div class="product-content">
-                    <h3>Nulife & Ansell Gloves</h3>
-                    <p>Protective latex and nitrile gloves for surgical, examination, and industrial use.</p>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-img">Image Placeholder</div>
-                <div class="product-content">
-                    <h3>Siddharth Cotton</h3>
-                    <p>Premium surgical cotton rolls and gauze products for hospitals and clinics.</p>
-                </div>
-            </div>
-
+<section class="products-section">
+    <div class="product-grid">
+        <div class="no-results">
+            <h3>No products found</h3>
+            <p>Try adjusting your search query</p>
         </div>
-    </section>
+
+        <div class="product-card">
+            <div class="product-img">Image Placeholder</div>
+            <div class="product-content">
+                <h3>Meril Ortho (Joint Replacement)</h3>
+                <p>Precision orthopedic implants and systems for joint replacement surgeries by Meril.</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">Image Placeholder</div>
+            <div class="product-content">
+                <h3>Primewear (Drapes)</h3>
+                <p>High-quality sterile drapes and disposable protective sheets for operating rooms.</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">Image Placeholder</div>
+            <div class="product-content">
+                <h3>Medicare Hygine</h3>
+                <p>Infection control and hygiene products for hospitals and laboratories.</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">Image Placeholder</div>
+            <div class="product-content">
+                <h3>X-Ray Developer & Fixer</h3>
+                <p>Essential chemicals for X-ray film processing and radiography imaging.</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">Image Placeholder</div>
+            <div class="product-content">
+                <h3>X-Ray Film Laser</h3>
+                <p>Medical-grade laser films used in digital radiography and diagnostic imaging.</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">Image Placeholder</div>
+            <div class="product-content">
+                <h3>Bennet Pharma</h3>
+                <p>Generic and branded pharmaceuticals for hospitals and retail distribution.</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">Image Placeholder</div>
+            <div class="product-content">
+                <h3>Babyhug Diaper</h3>
+                <p>Soft, absorbent diapers designed for infant care and comfort.</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">Image Placeholder</div>
+            <div class="product-content">
+                <h3>Questus Pharma</h3>
+                <p>Quality pharmaceutical formulations including tablets, capsules, and injectables.</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">Image Placeholder</div>
+            <div class="product-content">
+                <h3>Dynamic (Dyna)</h3>
+                <p>Orthopedic supports and rehabilitation products for injury recovery and joint care.</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">Image Placeholder</div>
+            <div class="product-content">
+                <h3>Alpha Therapeutics</h3>
+                <p>Specialized therapeutic drugs for chronic and acute medical conditions.</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">Image Placeholder</div>
+            <div class="product-content">
+                <h3>Medikit (Mediflon)</h3>
+                <p>Intravenous catheters and vascular access products for hospital use.</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">Image Placeholder</div>
+            <div class="product-content">
+                <h3>Vinjoh</h3>
+                <p>High-performance hospital furnishings and equipment accessories.</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">Image Placeholder</div>
+            <div class="product-content">
+                <h3>Omron Healthcare</h3>
+                <p>Blood pressure monitors, thermometers, and wellness devices for clinical and home use.</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">Image Placeholder</div>
+            <div class="product-content">
+                <h3>Fresenius Kabi India</h3>
+                <p>IV fluids, parenteral nutrition, and oncology medication from a trusted global brand.</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">Image Placeholder</div>
+            <div class="product-content">
+                <h3>Aculife Healthcare</h3>
+                <p>Comprehensive range of infusion and injectable drugs used in hospitals and clinics.</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">Image Placeholder</div>
+            <div class="product-content">
+                <h3>Arrow International</h3>
+                <p>Innovative vascular access and catheter products for critical care procedures.</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">Image Placeholder</div>
+            <div class="product-content">
+                <h3>Parkin Gloves</h3>
+                <p>Affordable and durable latex examination gloves for healthcare professionals.</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">Image Placeholder</div>
+            <div class="product-content">
+                <h3>Surgiwear</h3>
+                <p>Surgical instruments and disposables for general and specialty procedures.</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">Image Placeholder</div>
+            <div class="product-content">
+                <h3>Ramon and Well</h3>
+                <p>High-quality syringes and disposable healthcare products.</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">Image Placeholder</div>
+            <div class="product-content">
+                <h3>Suru International</h3>
+                <p>Medical consumables including infusion, transfusion, and urology solutions.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const searchInput = document.getElementById("productSearch");
+        const productCards = document.querySelectorAll(".product-card");
+        const noResults = document.querySelector(".no-results");
+        
+        // Search functionality
+        searchInput.addEventListener("input", function() {
+            const searchTerm = this.value.toLowerCase().trim();
+            let hasResults = false;
+            
+            productCards.forEach(card => {
+                const title = card.querySelector("h3").textContent.toLowerCase();
+                const description = card.querySelector("p").textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                    card.style.display = "block";
+                    hasResults = true;
+                } else {
+                    card.style.display = "none";
+                }
+            });
+            
+            // Show no results message if no matches found
+            if (!hasResults && searchTerm.length > 0) {
+                noResults.style.display = "block";
+            } else {
+                noResults.style.display = "none";
+            }
+            
+            // Show all if search is empty
+            if (searchTerm.length === 0) {
+                productCards.forEach(card => {
+                    card.style.display = "block";
+                });
+                noResults.style.display = "none";
+            }
+        });
+        
+        // Click search icon to focus input
+        document.querySelector(".search-icon").addEventListener("click", function() {
+            searchInput.focus();
+        });
+        
+        // Press Enter to search (already handled by input event)
+        searchInput.addEventListener("keyup", function(e) {
+            if (e.key === "Enter") {
+                this.blur(); // Remove focus after search
+            }
+        });
+    });
+</script>
 
 </body>
 </html>
